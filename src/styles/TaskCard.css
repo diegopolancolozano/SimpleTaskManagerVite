@@ -1,0 +1,113 @@
+.task-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
+}
+
+.task-card.completed {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.task-card.overdue {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.task-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.task-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #0066cc;
+}
+
+.task-title {
+  margin: 0;
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.task-description {
+  margin: 0.75rem 0 0 2.25rem;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.task-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 2.25rem;
+  gap: 1rem;
+}
+
+.task-date {
+  font-size: 0.9rem;
+  color: #666;
+  flex: 1;
+}
+
+.task-date.due-today {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.task-date.overdue-text {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.btn-delete:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
